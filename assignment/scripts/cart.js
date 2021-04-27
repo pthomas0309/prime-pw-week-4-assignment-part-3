@@ -8,3 +8,12 @@ function addItem(item) {
   basket.push(item);
   return true;
 }
+function listItems() {
+  for (var i = 0; i < basket.length; i++) {
+   console.log(basket[i]);
+  }
+}
+console.log(addItem('socks'));
+console.log(addItem('eggs'));
+console.log(addItem('toothbrush'));
+console.log(listItems());
