@@ -4,16 +4,31 @@ console.log('***** Cart Functions *****');
 let basket = [];
 
 function addItem(item) {
-  console.log('Adding an item to my cart', item);
+  console.log(`Adding an item to my cart: ${item}`);
   basket.push(item);
   return true;
 }
-function listItems() {
-  for (var i = 0; i < basket.length; i++) {
-   console.log(basket[i]);
-  }
-}
+
 console.log(addItem('socks'));
 console.log(addItem('eggs'));
 console.log(addItem('toothbrush'));
+
+function listItems() {
+  for (let i = 0; i < basket.length; i++) {
+   console.log(basket[i]);
+  }
+  return 'Nothing else in the basket'
+}
+
+console.log(addItem('ice cream'));
+console.log(addItem('rice'));
 console.log(listItems());
+
+function empty(contents) {
+  for (let i = 0; i <= contents; i++) {
+    basket.pop();
+  }
+  return basket;
+}
+
+console.log(`emptying the basket ${empty(5)}`);
